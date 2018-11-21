@@ -1,5 +1,6 @@
 import { User } from '../entities/User'
 import React from 'react';
+import './userData.css'
 const data = {
     results: [
         {
@@ -532,12 +533,13 @@ const data = {
                 thumbnail: "https://randomuser.me/api/portraits/thumb/women/16.jpg"
             },
             nat: "NL"
-        }
+        },
+
     ],
     info: { seed: "56f0706c061c05a6", results: 15, page: 1, version: "1.2" }
 };
 
-const listOfUsers = data.results;
+const listOfUsers = data.results;//api u promenljivu koja je niz
 
 const gridLayout = false;
 

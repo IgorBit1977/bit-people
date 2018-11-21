@@ -1,10 +1,18 @@
 import React from 'react';
-
-const Header = (props) => {
+import './header.css';
+import PropTypes from 'prop-types';
+const Header = ({ appTitle }) => {
     return (
         <div className="header">
-            <h1>{props.appTitle}</h1>
+            <h1>{appTitle}</h1>
         </div>
     );
+}
+
+Header.propTypes = {
+    appTitle: PropTypes.string
+}
+Header.defaultProps = {
+    appTitle: 'React Users App Default'
 }
 export { Header };
