@@ -2,7 +2,7 @@
 import React from 'react';
 
 const UserItem = (props) => {
-    console.log(props);
+    // console.log(props);
 
     return (
         <div className="user clearFix">
@@ -17,5 +17,14 @@ const UserItem = (props) => {
         </div>
     );
 }
+const hiddingEmail = email => {
+    const splitedEmail = email.split("");
+    splitedEmail.splice(3, splitedEmail.indexOf("@") - 3, "...");
 
+    const hiddenEmail = splitedEmail.join("");
+
+    return hiddenEmail;
+};
+
+export { hiddingEmail };
 export { UserItem };
