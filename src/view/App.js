@@ -7,15 +7,32 @@ import { Footer } from './partials/footer';
 import { UserList } from './users/UsersList';
 import { mappedUsers } from '../data.js/userData'
 
-const App = () => {
-  return (
-    <div>
-      <Header appTitle="React Users" />
-      <hr />
-      <UserList userList={mappedUsers} />
-      <Footer footerText="&copy;2018 Copyright Bit" />
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      appTitle: 'My App Title onClick',
+      userList: []
+    }
+  }
+  onChangeClick = (event) => {
+    const reactUserItems =
+      this.setState({ reactUserItems })
+  }
+
+  render() {
+    return (
+      <div>
+        <Header appTitle={this.state.appTitle} />
+        <input type='button'
+        <hr />
+        <UserList userList={mappedUsers} />
+        <Footer footerText="&copy;2018 Copyright Bit" />
+      </div >
+    );
+  }
+
+
 };
 
 
